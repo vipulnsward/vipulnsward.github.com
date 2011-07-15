@@ -12,12 +12,31 @@
    <title>aKNv</title>
 </head>
 <body>
- <ul id="menu" >
+ <ul id="menu1" >
                         <li><a href="http://vipulnsward.github.com" >home</a></li>
                         <li><a href="http://github.com/vipulnsward" >code</a></li>
                         <li><a href="http://aknv.wordpress.com" >blog</a></li>
-                        <li><a href="http://twitter.com/vipulnsward" >follow</a></li>
+			<li><a href="http://twitter.com/vipulnsward" >follow</a></li>
  </ul>
+
+<script type="text/javascript">
+ $("ul#menu1").sidebar({
+            position:"right",
+            events:{
+                item : {
+                    enter : function(){
+                        $(this).find("a").animate({color:"red"}, 250);
+                    },
+                    leave : function(){
+                        $(this).find("a").animate({color:"white"}, 250);
+                    }
+                }
+            }
+        });
+
+  </script>
+
+
 
 
 <div align="center">
@@ -32,21 +51,7 @@
 
 
 </div>
-<script type="text/javascript">
- $("ul#menu").sidebar({
-            position:"right",
-            events:{
-                item : {
-                    enter : function(){
-                        $(this).find("a").animate({color:"red"}, 250);
-                    },
-                    leave : function(){
-                        $(this).find("a").animate({color:"white"}, 250);
-                    }
-                }
-            }
-        });
-<script>
+
 
 </body>
 </html>
