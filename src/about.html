@@ -3,9 +3,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.8.13/jquery-ui.min.js"></script>
+        <link id="sidebar-style-link" rel="stylesheet" type="text/css" href="http://sideroad.secret.jp/css/dark-glass/sidebar.css" />
+        <script type="text/javascript" src="https://raw.github.com/sideroad/jquery.sidebar/master/src/jquery.sidebar.js"></script>
+
+
    <title>aKNv</title>
 </head>
 <body>
+ <ul id="menu" >
+                        <li><a href="http://vipulnsward.github.com" >home</a></li>
+                        <li><a href="http://github.com/vipulnsward" >code</a></li>
+                        <li><a href="http://aknv.wordpress.com" >blog</a></li>
+                        <li><a href="http://twitter.com/vipulnsward" >follow</a></li>
+ </ul>
+
+
 <div align="center">
 <br/>
 <br/>
@@ -14,8 +28,25 @@
 
 <small>&nbsp &nbsp &nbsp  vipulnsward at  gmail dot com <small><br/>
 <small>p21, lokayat, linux, git &nbsp &nbsp &nbsp &nbsp  <small><br/>
-<small>&nbsp &nbsp &nbsp &nbsp &nbsp 8149204995</small>
+<small>&nbsp &nbsp &nbsp &nbsp &nbsp 8149204995</small></small></small></small></small>
+
 
 </div>
+<script type="text/javascript">
+ $("ul#menu").sidebar({
+            position:"right",
+            events:{
+                item : {
+                    enter : function(){
+                        $(this).find("a").animate({color:"red"}, 250);
+                    },
+                    leave : function(){
+                        $(this).find("a").animate({color:"white"}, 250);
+                    }
+                }
+            }
+        });
+<script>
+
 </body>
 </html>
