@@ -1,0 +1,24 @@
+blockquote {
+  font: 14px/20px italic Times, serif;
+  padding-left: 70px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-right: 10px;
+  background-color: #dadada;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin: 5px;
+  background-image: url("../openquote4.gif");
+  background-position: middle left;
+  background-repeat: no-repeat;
+  text-indent: 23px;
+}
+
+.postCode{
+	background:lightyellow none repeat scroll 0 0;
+    	border:1px inset orange;
+    	margin:10px;
+	overflow:auto;
+	padding:6px;
+	text-align:left;
+} 

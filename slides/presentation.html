@@ -1,0 +1,449 @@
+<!doctype html> 
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>CSS 3D Slideshow</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:regular,600,bold' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/custom.css">		
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	
+	<body>
+		
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div id="main">
+
+			<section>
+			<br/><h1>Vipul A. M.</h1>
+			<br/><h3 class="inverted">ByClor</h3>
+			<br/><h3 class="inverted">Incubator, PICT</h3>	
+
+			</section>
+			
+			<section>
+				<h1>Eucalyptus</h1>
+				<h3 class="inverted">The Private Cloud,And stuff.</h3>
+				<img src="./euca_logo.jpg"/>
+
+				<script>
+					// Delicously hacky. Look away.
+					var message = navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ? 'Tap to navigate' : 'Navigate via keyboard';
+					document.write( '<p style="color: rgba(0,0,0,0.1); text-shadow: none;">('+message+')</p>' );
+				</script>
+			</section>
+	
+<section>				
+			<section>
+                                <h2>Cloud</h2>
+                                <blockquote><p>Cloud Computing is a computing model, where resources such as computing power, storage, network and software are abstracted and provided as services on the Internet in a remotely accessible fashion. Billing models for these services are generally similar to the ones adopted for public utilities. On-demand availability, ease of provisioning, dynamic and virtually infinite scalability are some of the key attributes of Cloud Computing.</p></blockquote>
+                        </section>
+			
+			<section>
+                                <h2>Broad Categories</h2>
+                                 <p><br/>
+                                <ul><h3 class="inverted">
+				<li>Infrastructure As A Services (IAAS)</li>
+				<li>Platform As A Service (PAAS)</li>
+				<li>Software As A Service (SAAS)</li>
+				</h3></ul>
+				</p>
+                        </section>
+
+
+			<section>
+                                <h2>The Cloud Party</h2>
+                                <img src="logo/engine.jpg" height=100 width=100> <img src="logo/gae.png" height="150" widht=200>
+
+				<br/><img src="logo/heroku.png" >
+				<br/><img src="logo/sales.jpg" height=100 width=100> <img src="logo/openstack.jpg" height=100 width=100>	
+                                
+                        </section>
+
+
+</section>
+
+
+			<section>
+                                <h2>Enter Eucalyptus</h2>
+                                <img src="euca_logo.jpg">
+				<blockquote>
+				<p>
+                                Eucalyptus is a software available under GPL that helps in creating and managing a private or even a publicly accessible cloud. It provides an EC2 compatible cloud computing platform and S3 compatible cloud storage platform. 
+				</p></blockquote>
+                        </section>
+
+<section>
+
+                        <section>
+                                <h2>Eucalyptus Components<br/> (UEC based)</h2>
+                                <p>
+				<br/>	
+                                 <ol>
+                                        <li>Node Controller(NC)</li>
+                                        <li>Cluster Controller(CC)</li>
+                                        <li>Walrus Storage Controller(WS3)</li>
+                                        <li>Storage Controller(SC)</li>
+                                        <li>Cloud Controller(CLC)</li>
+
+                                </ol>
+
+				</p>
+                        </section>
+
+
+                        <section>
+                                <h2>Node Controller</h2>
+                                <p>
+                                <blockquote>A UEC node is a VT enabled server capable of running KVM as the hypervisor.Node Controller runs on each node and controls the life cycle of instances running on the node. The NC interacts with the OS and the hypervisor running on the node on one side and the CC on the other side.</blockquote>
+				<h3>Fuctions: </h3>
+				<ol><li>Collection of data related to the resource availability and utilization on the Node and reporting the data to CC</li>
+				<li>Instance life cycle management</li>
+				</ol>
+				</p>
+                        </section>
+
+			 <section>
+                                <h2>Cluster Controller</h2>
+                                <p>
+				<blockquote>CC manages one or more Node Controllers and deploys/manages instances on them. CC also manages the networking for the instances running on the Nodes under certain types of networking modes of Eucalyptus. </blockquote>
+                                
+<ol>
+<li>To receive requests from CLC to deploy instances</li>
+<li>To decide which NCs to use for deploying the instances on</li>
+<li>To control the virtual network available to the instances</li>
+<li>To collect information about the NCs registered with it and report  it to the CLC</li>
+</ol>
+				</p>
+                        </section>
+			
+			 <section>
+                                <h2>Walrus Storage Controller</h2>
+                        <p><blockquote>WS3 provides a persistent simple storage service using REST and SOAP  APIs compatible with S3 APIs.</blockquote></p>
+<ol>
+<li>Storing the  machine images</li>
+<li>Storing snapshots</li>
+<li>Storing and serving files  using S3 API</li>
+</ol>
+			</section>
+
+			
+			 <section>
+                                <h2>Storage Controller</h2>
+                                <p>
+                                <blockquote>SC provides persistent block storage for use by the instances.</blockquote> 
+<ol>
+<li>Creation of persistent EBS devices</li>
+<li>Providing the block storage over AoE or iSCSI protocol to the  instances</li>
+<li>Allowing creation of snapshots of volumes.</li>
+</ol> 
+                                </p>
+                        </section>
+			
+			 <section>
+                                <h2>Cloud Controller</h2>
+                                <p>
+                                <blockquote>The Cloud Controller (CLC) is the front end to the entire cloud infrastructure. CLC provides an EC2/S3 compliant web services interface  to the client tools on one side and interacts with the rest of the  components of the Eucalyptus infrastructure on the other side</blockquote>
+<ol>
+<li>Monitor the availability of resources on various components of the  cloud infrastructure</li>
+<li>Resource arbitration &#8211; Deciding which clusters will be used for  provisioning the instances</li>
+<li>Monitoring the running instances</li>
+</ol>
+				</p>
+                        </section>
+
+                        <section>
+                                <h2>Architecture Overview</h2>
+                        	<img src=eucalyptus_cloud.png>
+			</section>
+
+
+
+</section>
+
+<section>
+
+			 <section>
+                                <h2>Lets Boot Up!</h2>
+                        	<img src="uecsetup.png" width=700>
+			</section>
+				
+				
+                         <section>
+                                <h2 >Caution!</h2>
+                                <p>
+                                    What you are about to do is always unstable<br/><br/>
+				    So don't be disheartened after repeated tries<br/> <br/>We got it running after banging my head for days
+                                </p>
+                        </section>
+
+	
+                         <section>
+                                <h2>What you'll need</h2>
+					<table style="border-collapse:collapse;padding:2px;" border="1">
+<tbody>
+<tr>
+<th rowspan="2">Hardware</th>
+<th colspan="2">Server</th>
+<th colspan="2">Node</th>
+</tr>
+<tr>
+<th>Minimum</th>
+<th>Suggested</th>
+<th>Minimum</th>
+<th>Suggested</th>
+</tr>
+<tr>
+<td style="padding:.5em;">CPU</td>
+<td style="padding:.5em;">1GHz</td>
+<td style="padding:.5em;">2 x 2GHz</td>
+<td style="padding:.5em;">VT extensions</td>
+<td style="padding:.5em;">VT, 64Bit, Multicore</td>
+</tr>
+<tr>
+<td style="padding:.5em;">Memory</td>
+<td style="padding:.5em;">1 GiB</td>
+<td style="padding:.5em;">2 GiB</td>
+<td style="padding:.5em;">1 GiB</td>
+<td style="padding:.5em;">4 GiB</td>
+</tr>
+<tr>
+<td style="padding:.5em;">Disk</td>
+<td style="padding:.5em;">5400rpm IDE</td>
+<td style="padding:.5em;">7200rpm SATA</td>
+<td style="padding:.5em;">5400rpm IDE</td>
+<td style="padding:.5em;">7200rpm SATA or SCSI</td>
+</tr>
+<tr>
+<td style="padding:.5em;">Disk Space</td>
+<td style="padding:.5em;">40GB</td>
+<td style="padding:.5em;">200GB</td>
+<td style="padding:.5em;">40GB</td>
+<td style="padding:.5em;">100GB</td>
+</tr>
+<tr>
+<td style="padding:.5em;">Networking</td>
+<td style="padding:.5em;">100Mbps</td>
+<td style="padding:.5em;">1000Mbps</td>
+<td style="padding:.5em;">100Mbps</td>
+<td style="padding:.5em;">1000Mbps</td>
+</tr>
+</tbody>
+</table>
+                        </section>
+
+                        <section>
+                                <h2>Step One {Front End}</h2>
+                                <ol>
+                      		 <li>Install Ubuntu Server</li>
+			         <li>Update<br/><code class="postCode">sudo apt-get update /
+				 sudo apt-get dist-upgrade</code></li>
+				 <li>Install Packages<br/><code class="postCode">sudo apt-get install eucalyptus-cloud eucalyptus-cc <br/><br/> eucalyptus-walrus eucalyptus-sc</code></li>
+				<li>Answer Debconf with postfix delivery{<i>Internet</i>}, Cluster Name,Public IP Address Range<br/><code class="postCode">Eg: 192.168.1.200-192.168.1.249</code> </li>	
+                                </ol>
+                        </section>
+
+                        <section>
+                                <h2>Step Two{NC}</h2>
+<ol>
+<li>Install Ubuntu Server</li>
+<li>Update<br/><code class="postCode">sudo apt-get update /
+                                 sudo apt-get dist-upgrade</code></li>
+<li>Install Eucalyptus NC<br/><code class="postCode">sudo apt-get install eucalyptus-nc</code></li>
+<li>Create Bridge{Code Next Slide}</li>
+<li>Configure eucalyptus.conf with name of bridge{CNS}</li>
+</ol>                        	
+			</section>
+
+                        <section>
+                                <h2>Bridging</h2>
+                        
+<ol>
+<li class="postCode">interface=eth0<br/>
+bridge=br0<br/>
+sudo sed -i "s/^iface $interface inet \(.*\)$/iface $interface inet manual\n\nauto br0\niface $bridge inet \1/" /etc/network/interfaces
+<br/>sudo tee -a /etc/network/interfaces &lt;&lt;EOF
+        bridge_ports $interface
+        bridge_fd 9
+        bridge_hello 2
+        bridge_maxage 12
+        bridge_stp off
+EOF<br/>
+sudo /etc/init.d/networking restart</li>
+</ol>
+			</section>
+
+
+                        <section>
+                                <h2>Bridging</h2>
+                                <p class="postCode">
+                                sudo sed -i "s/^VNET_BRIDGE=.*$/VNET_BRIDGE=$bridge/" /etc/eucalyptus/eucalyptus.conf
+<br/>sudo /etc/init.d/eucalyptus-nc restart
+				
+				</p>
+                        </section>
+
+
+                        <section>
+                                <h2>Authorize</h2>
+<ol>
+<li>Set Eucalyptus Password</li>
+<li>Exchange keys<br/><code class="postCode">sudo -u eucalyptus ssh-copy-id -i ~eucalyptus/.ssh/id_rsa.pub eucalyptus@<IP_OF_NODE></code></li>
+<li>Delete Eucalyptus Password {Optional}</li>
+
+</ol>                        
+
+
+			</section>
+
+                        <section>
+                               <h2>Publish {Services}</h2>
+                                <p class="postCode">
+                                sudo start eucalyptus-walrus-publication<br/>
+				sudo start eucalyptus-cc-publication</br>
+				sudo start eucalyptus-nc-publication<br/>
+				sudo start eucalyptus-sc-publication
+				</p><br/>
+				<p>Start Listener on Cloud/Cluster</p>
+				<br/><p class="postCode">sudo start uec-component-listener</p>	
+                        </section>
+
+                        <section>
+                                <h2>Verify Registration</h2>
+                                <p class="postCode">
+                                cat /var/log/eucalyptus/registration.log /
+2010-04-08 15:46:36-05:00 | 24243 -&gt; Calling node cluster1 node 10.1.1.75
+2010-04-08 15:46:36-05:00 | 24243 -&gt; euca_conf --register-nodes returned 0
+2010-04-08 15:48:47-05:00 | 25858 -&gt; Calling walrus Walrus 10.1.1.71
+2010-04-08 15:48:51-05:00 | 25858 -&gt; euca_conf --register-walrus returned 0
+2010-04-08 15:49:04-05:00 | 26237 -&gt; Calling cluster cluster1 10.1.1.71
+2010-04-08 15:49:08-05:00 | 26237 -&gt; euca_conf --register-cluster returned 0
+2010-04-08 15:49:17-05:00 | 26644 -&gt; Calling storage cluster1 storage 10.1.1.71
+2010-04-08 15:49:18-05:00 | 26644 -&gt; euca_conf --register-sc returned 0
+				</p>
+                        </section>
+
+                        <section>
+                                <h2>Obtain Credentials</h2>
+                                <p>
+<ul>
+<li>https://&lt;cloud-controller-ip-address&gt;:8443/</li>
+<li>Download Credentials</li>
+<li>Save them to ~/.euca</li>
+<li>Install euca2ools</li><br/><code class="postCode">sudo apt-get install euca2tools</code> <br/>
+<li>Source eucarc</li>
+</ul>
+                                </p>
+                        </section>
+
+
+                        <section>
+                                <h2>Verify Acess</h2>
+                                <p class="postCode">
+                                . ~/.euca/eucarc <br/>
+euca-describe-availability-zones verbose <br/>
+AVAILABILITYZONE   myowncloud                 192.168.1.1<br/>
+AVAILABILITYZONE   |- vm types                free / max   cpu   ram  disk <br/>
+AVAILABILITYZONE   |- m1.small                0004 / 0004   1    192     2<br/>
+AVAILABILITYZONE   |- c1.medium               0004 / 0004   1    256     5<br/>
+AVAILABILITYZONE   |- m1.large                0002 / 0002   2    512    10<br/>
+AVAILABILITYZONE   |- m1.xlarge               0002 / 0002   2   1024    20<br/>
+AVAILABILITYZONE   |- c1.xlarge               0001 / 0001   4   2048    20<br/>
+				</p>
+                        </section>
+
+                        <section>
+                                <h2>Install Images</h2>
+                                <p>
+                                If you were able to see some free resources, Go Party!<br/>You're Cloud is up and running.
+				<br/>Browse to the Web-Dashboard and install images from the store 
+				</p>
+                        </section>
+
+                        <section>
+                                <h2>Run it!</h2>
+                        
+<ol>
+<li>Create Key-Pair <br/><code class="postCode">if [ ! -e ~/.euca/mykey.priv ]; then
+    mkdir -p -m 700 ~/.euca
+    touch ~/.euca/mykey.priv
+    chmod 0600 ~/.euca/mykey.priv
+    euca-add-keypair mykey &gt; ~/.euca/mykey.priv
+fi  </code></li>
+<li>Allow Access to port <br/> <code class="postCode">euca-authorize default -P tcp -p 22 -s 0.0.0.0/0</code></li>
+</ol>
+
+			</section>
+
+                        <section>
+                                <h2>Create Instance</h2>
+                        
+<ol>
+<li>Create an instance<br/><code class="postCode">euca-run-instances $EMI -k mykey -t m1.small</code></li>
+<li><code class="postCode">watch -n5 euca-describe-instances</code></li>
+<li>SSH using your key.</li>
+<li>Terminate at will</li>
+</ol>
+
+			</section>
+
+</section>
+
+<section>
+
+
+                        <section>
+                                <h2>Open Stack it</h2>
+                                <p>
+                                UEC Highly unstable! <br/>
+				Let's Cloud Live.
+				</p>
+                        </section>
+	
+			
+	
+			  <section>
+                                <h2>OpenStack</h2>
+                                <p>
+                                <img src="nova.png">
+				</p>
+                        </section>
+
+
+			<section>
+			<h2>Let's Play</h2>
+			</section>
+
+
+
+
+
+
+</section>
+
+
+			<!--section>
+				<h2></h2>
+				<p>
+					This requires a browser with support for CSS3 3D transforms, such as Mobile Safari.
+				</p>
+			</section-->
+			
+				
+			
+			
+			<section>
+				<h1>THE END</h1>
+				<h3 class="inverted">Vipul A. M. <h3><br/><h3 class="inverted">vipul dot byclor dot org</h3>
+			</section>
+			
+		</div>
+		
+		<script src="js/slideshow.js"></script>
+		
+		
+	</body>
+</html>
